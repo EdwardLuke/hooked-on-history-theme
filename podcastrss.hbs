@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+    xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0">
+
+<channel>
+<title>{{@blog.title}}</title>
+<link>{{@blog.url}}</link>
+<description>{{@blog.description}}</description>
+<language>{{lang}}</language>
+<copyright>{{@blog.title}} Copyright {{date format="YYYY"}}</copyright>
+<lastBuildDate>{{date format="ddd, DD MMM YYYY HH:mm:ss ZZ"}}</lastBuildDate>
+<itunes:author>{{@blog.title}}</itunes:author>
+<itunes:summary>{{@blog.description}}</itunes:summary>
+<itunes:owner>
+    <itunes:name>Alex Brown</itunes:name>
+    <itunes:email>hookedonhistorypodcast@gmail.com</itunes:email>
+</itunes:owner>
+<itunes:explicit>true</itunes:explicit>
+<itunes:image href="https://files.hookedonhistory.co.uk/hooked+on+history+logo.png"/>
+<itunes:category text="History"></itunes:category>
+<itunes:type>episodic</itunes:type>
+
+{{#foreach posts}}
+<item>
+    <title>{{title}}</title>
+    <link>{{url absolute="true"}}</link>
+    <pubDate>{{date format="ddd, DD MMM YYYY HH:mm:ss ZZ"}}</pubDate>
+    <guid isPermaLink="false">{{id}}</guid>
+    <category>History</category>
+    <description><![CDATA[ {{content}} ]]></description>
+    <enclosure url="{{og_description}}" length="{{og_title}}" type="audio/mpeg"/>
+    <itunes:episode>{{twitter_description}}</itunes:episode>
+    <itunes:summary><![CDATA[ {{content}} ]]></itunes:summary>
+    <itunes:keywords>{{custom_excerpt}}</itunes:keywords>
+</item>
+{{/foreach}}
+
+</channel>
+</rss>
