@@ -22,7 +22,8 @@
 <itunes:category text="History"></itunes:category>
 <itunes:type>episodic</itunes:type>
 
-{{#foreach posts}}
+{{#get "posts" filter="tag:syndicated_episode" as |episode|}}
+{{#foreach episode}}
 <item>
     <title>{{title}}</title>
     <link>{{url absolute="true"}}</link>
@@ -36,6 +37,7 @@
     <itunes:keywords>{{custom_excerpt}}</itunes:keywords>
 </item>
 {{/foreach}}
+{{/get}}
 
 </channel>
 </rss>
