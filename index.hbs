@@ -16,6 +16,12 @@ into the {body} of the default.hbs template --}}
                     {{/if}}
                 </h1>
                 <h2 class="site-description">{{@site.description}}</h2>
+                <div class="site-home-header-content__podcast-player">
+                    <audio class="podcast-player podcast-player--latest" controls>
+                        <source src="" type="audio/mpeg">
+                        <noscript><style>.podcast-player--latest { display: none }</style></noscript>
+                    </audio>
+                </div>
             </div>
         </div>
     </div>

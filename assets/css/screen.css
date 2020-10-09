@@ -3048,3 +3048,11 @@ Usage (In Ghost editor):
     width: 100%;
     margin-bottom: 1.5em;
 }
+
+.site-home-header-content__podcast-player {
+    margin-top: 1em;
+}
+
+.site-home-header-content__podcast-player .podcast-player {
+    margin-bottom: 0;
+}
