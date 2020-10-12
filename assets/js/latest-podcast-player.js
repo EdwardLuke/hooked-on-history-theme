@@ -26,6 +26,8 @@
     function setAudioSourceSrc(audioUrl, audioMimeType) {
         return function (audioElement) {
             audioElement
+                .setAttribute('src', audioUrl)
+            audioElement
                 .querySelector(createSourceSelector(audioMimeType))
                 .setAttribute('src', audioUrl)
         }
