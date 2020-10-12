@@ -166,7 +166,7 @@ body {
     font-size: 4.5rem;
     line-height: 1em;
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #e5dab4;
 }
 
@@ -209,6 +209,7 @@ body {
     text-align: center;
     font-weight: bold;
     margin: 0.1rem;
+    text-transform: uppercase;
 }
 
 .site-home-header .site-description {
@@ -3050,6 +3051,8 @@ Usage (In Ghost editor):
 }
 
 .site-home-header-content__podcast-player {
+    width: 100%;
+    max-width: 21em;
     margin-top: 1em;
 }
 
